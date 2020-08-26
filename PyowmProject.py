@@ -7,32 +7,32 @@ manager = owm.weather_manager()
 weather = manager.weather_at_place('Moscow,Russia').weather 
 temp = weather.temperature('celsius')
 T.append(temp["temp"])
-print("Москва: ", weather, temp )
+print("Moscow: ", weather, temp )
 
 weather = manager.weather_at_place('Saint Petersburg,Russia').weather 
 temp = weather.temperature('celsius')
 T.append(temp["temp"])
-print("Санкт-Петербург: ", weather, weather.temperature('celsius'))
+print("Saint Petersburg: ", weather, weather.temperature('celsius'))
 
 weather = manager.weather_at_place('Novosibirsk,Russia').weather 
 temp = weather.temperature('celsius')
 T.append(temp["temp"])
-print("Новосибирск: ", weather, weather.temperature('celsius'))
+print("Novosibirsk: ", weather, weather.temperature('celsius'))
 
 weather = manager.weather_at_place('Ekaterinburg,Russia').weather 
 temp = weather.temperature('celsius')
 T.append(temp["temp"])
-print("Екатеринбург: ", weather, weather.temperature('celsius'))
+print("Ekaterinburg: ", weather, weather.temperature('celsius'))
 
 weather = manager.weather_at_place('Nizhny Novgorod,Russia').weather 
 temp = weather.temperature('celsius')
 T.append(temp["temp"])
-print("Нижний Новгород: ", weather, weather.temperature('celsius'))
+print("Nizhny Novgorod: ", weather, weather.temperature('celsius'))
 
 weather = manager.weather_at_place('Kazan,Russia').weather 
 temp = weather.temperature('celsius')
 T.append(temp["temp"])
-print("Казань: ", weather, weather.temperature('celsius'))
+print("Kazan: ", weather, weather.temperature('celsius'))
 
 print(*T)
 
@@ -47,5 +47,5 @@ for elem in T:
 mid = sum / len(T)
 print(*T)
 
-print("Медиана данного ряда -", T[len(T) // 2 - 1] )
-print("Среднее значение температуры в 6-и самых больших городах Росии:", mid)
+print("Медиана значений температуры в 6 самых больших городов России -", T[len(T) // 2 - 1] )
+print("И среднее значение температурыв 6 самых больших городов России:", mid)
